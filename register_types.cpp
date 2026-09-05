@@ -42,8 +42,6 @@ void initialize_GDMYDebug_module(ModuleInitializationLevel p_level) {
 	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
 		return;
 	}
-	ClassDB::register_class<GDMYDebug>();
-
 	gdmy_debug = memnew(GDMYDebug);
 	GDREGISTER_CLASS(GDMYDebug);
 	Engine::get_singleton()->add_singleton(Engine::Singleton("GDMYDebug", gdmy_debug));
